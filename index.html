@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Pro</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background: #0f172a;
+            color: white;
+        }
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+        }
+
+        .logo{
+            font-size: 28px;
+            font-weight: bold;
+            color: #4ade80;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: white;
+            margin-left: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover{
+            color: #4ade80;
+        }
+
+        .hero{
+            height: 90vh;
+            background:
+            linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+            url("https://images.unsplash.com/photo-1542144582-1ba00456b5e3?q=80&w=1400")
+            center/cover;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content h1{
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content span{
+            color: #4ade80;
+        }
+
+        .hero-content p{
+            max-width: 700px;
+            margin: auto;
+            font-size: 20px;
+            color: #d1d5db;
+            margin-bottom: 30px;
+        }
+
+        .btn{
+            display: inline-block;
+            padding: 15px 35px;
+            background: #4ade80;
+            color: black;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover{
+            transform: scale(1.05);
+        }
+
+        .section-title{
+            text-align: center;
+            font-size: 40px;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+
+        .cards{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 0 60px 60px;
+        }
+
+        .card{
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .card:hover{
+            transform: translateY(-10px);
+        }
+
+        .card h3{
+            margin-bottom: 15px;
+            color: #4ade80;
+            font-size: 24px;
+        }
+
+        .players{
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            flex-wrap: wrap;
+            padding: 20px 60px 80px;
+        }
+
+        .player{
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 25px;
+            text-align: center;
+            width: 250px;
+            transition: 0.3s;
+        }
+
+        .player:hover{
+            transform: translateY(-10px);
+        }
+
+        .player img{
+            width: 100%;
+            height: 285px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 15px;
+        }
+
+        .player h3{
+            color: #4ade80;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .player p{
+            color: #d1d5db;
+            font-size: 18px;
+        }
+
+        footer{
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            color: #94a3b8;
+        }
+
+        @media(max-width: 768px){
+
+            header{
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero-content h1{
+                font-size: 45px;
+            }
+
+            .hero-content p{
+                font-size: 18px;
+            }
+
+            .cards{
+                padding: 20px;
+            }
+
+            .players{
+                padding: 20px;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+
+        <div class="logo">TennisPro</div>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Jugadores</a>
+            <a href="#">Torneos</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>El Mundo del <span>Tennis</span></h1>
+
+            <p>
+                Vive la pasión del tenis moderno, los mejores jugadores,
+                los torneos más importantes y toda la adrenalina de este deporte.
+            </p>
+
+            <a href="#" class="btn">Explorar</a>
+
+        </div>
+
+    </section>
+
+    <h2 class="section-title">¿Por qué el Tennis?</h2>
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>Potencia</h3>
+            <p>
+                Golpes agresivos, velocidad y precisión en cada punto.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Estrategia</h3>
+            <p>
+                Cada partido es una batalla mental y táctica.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Disciplina</h3>
+            <p>
+                El tenis desarrolla reflejos, resistencia y concentración.
+            </p>
+        </div>
+
+    </section>
+
+    <h2 class="section-title">Jugadores Legendarios</h2>
+
+    <section class="players">
+
+        <div class="player">
+            <img src="https://s2.sportstatics.com/relevo/www/multimedia/202402/18/media/cortadas/reves-una-mano-tenis-federer-Rg4vifpV37wwOSu1VAVKFuO-1200x648@Relevo.jpg" alt="">
+            <h3>Roger Federer</h3>
+            <p>Elegancia y técnica impecable.</p>
+        </div>
+
+        <div class="player">
+            <img src="https://miro.medium.com/1*sDkqgqpJHWJJTfR3Cokszw.jpeg" alt="">
+            <h3>Rafael Nadal</h3>
+            <p>Intensidad y espíritu competitivo.</p>
+        </div>
+
+        <div class="player">
+            <img src="https://ca-times.brightspotcdn.com/dims4/default/8cca80e/2147483647/strip/true/crop/1974x2961+0+0/resize/1200x1800!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F84%2Fb9%2F8af8f1035a0f1eeee5c2ed7adc1d%2F4f28a07efe304e90ae154fd185417c2f" alt="">
+            <h3>Novak Djokovic</h3>
+            <p>Consistencia y mentalidad ganadora.</p>
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 TennisPro - Todos los derechos reservados
+    </footer>
+
+</body>
+</html>
